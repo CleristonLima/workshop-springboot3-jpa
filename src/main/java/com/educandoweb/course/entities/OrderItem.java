@@ -34,7 +34,7 @@ public class OrderItem implements Serializable {
 		this.price = price;
 	}
 	
-	@JsonIgnore
+	@JsonIgnore // Para não dar um loop infinito no postman
 	public Order getOrder() {
 		return id.getOrder();
 	}
